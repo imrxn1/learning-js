@@ -26,7 +26,6 @@
 // markHigherBMI = bmi3 > bmi4;
 // console.log(bmi3,bmi4,markHigherBMI);/
 
-
 //challenge 2
 
 //  const mass1 = 78;
@@ -44,7 +43,7 @@
 //     console.log(`Jhon's BMI (${bmi2.toFixed(2)}) is higher than Mark's BMI (${bmi1.toFixed(2)}) `);
 // }
 
-// logical operators 
+// logical operators
 // const hasDriverLicense = true;
 // const hasGoodVision = true;
 
@@ -68,7 +67,6 @@
 //     console.log('Someone else should drive')
 // }
 
-
 //challenge 3
 // const dolphinScore1 = 96;
 // const dolphinScore2 = 108;
@@ -87,14 +85,13 @@
 // } else if (koalaAvg > dolphinAvg) {
 //     console.log(`koala wins`);
 // } else {
-//     console.log(`it's a draw`); 
-// } 
+//     console.log(`it's a draw`);
+// }
 
 // if(dolphinAvg > koalaAvg && dolphinAvg >= 100) {
 //     console.log(`dolphin's wins`);
 // } else if (koalaAvg > dolphinAvg && koalaAvg >= 100) {
 //     console.log(`koala wins`);
 // } else if (koalaAvg === dolphinAvg && koalaAvg >= 100 && dolphinAvg >=100) {
-//     console.log(`it's a draw`); 
-// } 
-
+//     console.log(`it's a draw`);
+// }
