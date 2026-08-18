@@ -67,7 +67,7 @@
 //   //at middle element 3 we stop swaping
 
 //   let temp = arr[i];
-//   arr[i] = arr[arr.length-1 -i]; //-i cause we want to go from last element to second last element 
+//   arr[i] = arr[arr.length-1 -i]; //-i cause we want to go from last element to second last element
 //   arr[arr.length -1 -i] = temp;
 // }
 
@@ -80,27 +80,161 @@
 // const arr = [1,2,3];
 
 // // output: 1,2,3 string
-// console.log(arr.join( )); 
+// console.log(arr.join( ));
 
-// //every element fill 
-// // arr.fill(0); 
+// //every element fill
+// // arr.fill(0);
 
 // // add two array
 // const arr2 = [5,6,7];
-// const arr3 = arr.concat(arr2) 
+// const arr3 = arr.concat(arr2)
 // console.log(arr3);
 
 // // two check if array or not
-// console.log(Array.isArray(arr)); 
+// console.log(Array.isArray(arr));
 
 // // make array from a array ( CLONE )
-// const arr4 = Array.from(arr); 
+// const arr4 = Array.from(arr);
 
 // console.log(arr4);
 
 // // why const arr4 = arr ??
 // const arr5 = arr;
 // arr5[0] = 99;
-// console.log(arr[0]); //99 arr is changed, mutable 
+// console.log(arr[0]); //99 arr is changed, mutable
 
+// Objects
 
+// const point = {
+//   x: 10,
+//   y: 20,
+//   z: 15,
+// };
+
+// //asses the value in object
+
+// //dot notation
+// console.log(point.x);
+// console.log(point.x + point.z);
+
+// //array notation //when we dont know the property acessing
+// console.log(point["x"]);
+// console.log(point["z"]);
+
+//update the value
+// point.x = 45;
+// console.log(point);
+
+// point['y'] = 100;
+
+// const prop = 'z';
+// point[prop] = 55;
+// console.log(point);
+
+// //delete a property
+// point.a = undefined;
+// console.log(point);
+
+// delete point.a;
+// console.log(point);
+
+//comapring two objects
+
+// const obj1 = {
+//   a: 10,
+//   b: 20,
+// };
+
+// const obj2 = {
+//   a: 10,
+//   b: 2,
+// };
+
+// console.log(JSON.stringify(obj1) === JSON.stringify(obj2));
+
+// property is avalable in object or not
+
+// const obj = {
+//     x: 40,
+//     y: 60,
+//     z: 75
+// }
+
+// console.log('x' in obj);
+// console.log('a' in obj);
+
+// // which property in obj, obj travese
+
+// for(const i in obj) {
+//     console.log(i);
+//     console.log(obj[i]); // assesing obj by variable, array notation
+
+// }
+
+// // obj method
+
+// const obj = {
+//     x:40,
+//     y:60,
+//     z:75
+// }
+
+// // what keys in obj
+// console.log(Object.keys(obj));
+
+// // what values in object
+// console.log(Object.values(obj));
+
+// // keys + value
+// console.log(Object.entries(obj));
+
+// // creating obj from a obj
+// const obj2 = Object.assign({}, obj);
+
+// Function
+
+// function test(a, b, c) { //parameter
+//   //   console.log(arguments);
+
+//   for (let i = 0; i < arguments.length; i++) {
+//     console.log(arguments[i]);
+//   }
+// }
+
+// test(10, 20, 30); //arguments, array like data structes object
+
+// // we dont know how many agruments we are passing
+// function addAll() {
+//   let sum = 0;
+//   for (let i = 0; i < arguments.length; i++) {
+//     sum += arguments[i];
+//   }
+//   console.log(sum);
+// }
+
+// addAll(12, 23, 45, 76);
+
+//function expression
+// const add = function (a,b) { //annamoyous function
+//     return a + b;
+// }
+
+// add (12,13);
+
+// setTimeout(function () {
+//  console.log('i will be called after 5 sec');
+
+// }, 5000)
+
+// const antoher = add;
+// console.log(antoher(9,8));
+
+//inner function
+// function something(greet, name) {
+//   function sayHi(greet) {
+//     console.log(`${greet}, name`);
+//   }
+//   sayHi(greet);
+// }
+
+// something("hello", "imran");
