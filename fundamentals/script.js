@@ -1,97 +1,106 @@
-// challenge 1
+//Array
+// const arr = [1,2,3,4,5,6];
 
-// //test data 1
-//  const mass1 = 78;
-//  const height1 = 1.69;
-
-//  const mass2 = 92;
-//  const height2 = 1.95;
-
-// let bmi1 = mass1 / Math.pow (height1,2);
-// let bmi2 = mass2 / Math.pow(height2, 2);
-
-// let markHigherBMI = bmi1 > bmi2;
-// console.log(bmi1,bmi2,markHigherBMI);
-
-// //test data 2
-//  const mass3 = 95;
-//  const height3 = 1.88;
-
-//  const mass4 = 85;
-//  const height4 = 1.76;
-
-// let bmi3 = mass3 / Math.pow (height3,2);
-// let bmi4 = mass4 / Math.pow(height4, 2);
-
-// markHigherBMI = bmi3 > bmi4;
-// console.log(bmi3,bmi4,markHigherBMI);/
-
-//challenge 2
-
-//  const mass1 = 78;
-//  const height1 = 1.69;
-
-//  const mass2 = 92;
-//  const height2 = 1.95;
-
-// let bmi1 = mass1 / Math.pow (height1,2);
-// let bmi2 = mass2 / Math.pow(height2, 2);
-
-// if (bmi1 > bmi2) {
-//     console.log(`Mark's BMI (${bmi1.toFixed(2)}) is higher than Jhon's BMI (${bmi2.toFixed(2)}) `);
-// } else {
-//     console.log(`Jhon's BMI (${bmi2.toFixed(2)}) is higher than Mark's BMI (${bmi1.toFixed(2)}) `);
+// //array traversing
+// for(let i = 0; i < arr.length; i++){
+//     console.log(arr[i]);
 // }
 
-// logical operators
-// const hasDriverLicense = true;
-// const hasGoodVision = true;
+// //Insert and remove element
+// arr.push(9); //add element to last
+// arr.unshift(9); //add element to first
 
-// console.log(hasDriverLicense || hasGoodVision);
-// console.log(!hasDriverLicense);
+// arr.splice(3,0,9,10); //add element at specif place
 
-// const shouldDRive = hasDriverLicense && hasGoodVision;
+// arr.pop() //remove last element
+// arr.shift() //remove first element
 
-// if(shouldDRive) {
-//     console.log('Sarah is able to drive');
-// } else {
-//     console.log('Someone else should drive')
+// arr.splice(3, 1);  //remove elemnt at a specific place
+// arr.splice(3, 1, 44); //updateing element
+// console.log(arr);
+
+// Search Data
+
+// const arr = [1,2,7,93,43,81,0,43];
+
+// const find = 10;
+// let isFound = false;
+
+// for (let index = 0; index < arr.length; index++) {
+//     if (arr[index] === find) {
+//         console.log(`data find at index ${index}`);
+//         isFound = true;
+//         break;
+//     }
 // }
 
-// const isTired = true;
-// console.log(hasDriverLicense || hasGoodVision || isTired);
+// /* outside not if-else in for loop cause it will print
+//  everytime for loop runs */
 
-// if(hasDriverLicense && hasGoodVision && !isTired) {
-//     console.log('Sarah is able to drive');
-// } else {
-//     console.log('Someone else should drive')
+// if(!isFound) {
+//     console.log('data not found');
+
 // }
 
-//challenge 3
-// const dolphinScore1 = 96;
-// const dolphinScore2 = 108;
-// const dolphinScore3 = 89;
+// multi dimensional array
 
-// let dolphinAvg = dolphinScore1 + dolphinScore2 + dolphinScore3 / 3;
+// const arr = [
+//   [78, 90, 87, 67],
+//   [90, 98, 76, 78],
+//   [94, 87, 69, 83],
+// ];
 
-// const koalaScore1 = 88;
-// const koalaScore2 = 91;
-// const koalaScore3 = 110;
+// // console.log(arr[0][0]);
 
-// let koalaAvg = koalaScore1 + koalaScore2 + koalaScore3 / 3;
-
-// if(dolphinAvg > koalaAvg) {
-//     console.log(`dolphin's wins`);
-// } else if (koalaAvg > dolphinAvg) {
-//     console.log(`koala wins`);
-// } else {
-//     console.log(`it's a draw`);
+// for (let i = 0; i < arr.length; i++) {
+//   for (let j = 0; j < arr[i].length; j++) {
+//     console.log(arr[i][j]);
+//   }
 // }
 
-// if(dolphinAvg > koalaAvg && dolphinAvg >= 100) {
-//     console.log(`dolphin's wins`);
-// } else if (koalaAvg > dolphinAvg && koalaAvg >= 100) {
-//     console.log(`koala wins`);
-// } else if (koalaAvg === dolphinAvg && koalaAvg >= 100 && dolphinAvg >=100) {
-//     console.log(`it's a draw`);
+// reverse an array
+
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+
+// for (let i = 0; i < ( arr.length / 2); i++) {
+//   // we are swaping till middle [1,2,3,4,5] = [5,4,3,2,1]
+//   //at middle element 3 we stop swaping
+
+//   let temp = arr[i];
+//   arr[i] = arr[arr.length-1 -i]; //-i cause we want to go from last element to second last element 
+//   arr[arr.length -1 -i] = temp;
 // }
+
+// console.log(arr);
+
+// console.log(arr.reverse());
+
+//methods
+
+// const arr = [1,2,3];
+
+// // output: 1,2,3 string
+// console.log(arr.join( )); 
+
+// //every element fill 
+// // arr.fill(0); 
+
+// // add two array
+// const arr2 = [5,6,7];
+// const arr3 = arr.concat(arr2) 
+// console.log(arr3);
+
+// // two check if array or not
+// console.log(Array.isArray(arr)); 
+
+// // make array from a array ( CLONE )
+// const arr4 = Array.from(arr); 
+
+// console.log(arr4);
+
+// // why const arr4 = arr ??
+// const arr5 = arr;
+// arr5[0] = 99;
+// console.log(arr[0]); //99 arr is changed, mutable 
+
+
