@@ -395,3 +395,60 @@ We can return Functions from Another Function */
 // }
 
 // print(multiplyByFive(add(3,5)));
+
+// hoisting
+
+// const a = 100;
+// // newPrint(a);
+
+// print(10);
+
+// const newPrint = print;
+// newPrint(45);
+
+// function print(a) {
+//     console.log((a));
+
+// }
+
+// print(a);
+
+// cretional phase
+// a = undefined
+// newPrint = undefined
+// print = ref
+
+// executional phase
+// a = 100
+// error - newPrint(a);
+// newPrint = ref
+// no error
+
+// Closure
+/* Closure is when a function is able to remember and access it's lexical scope
+even when that function executing outside it's lexical scope */
+
+// function test() {
+//     const msg = 'i am learning lexical scope and closure';
+
+//     function sayMsg() {
+//         console.log(msg);
+
+//     }
+//     sayMsg();
+// }
+
+// test();
+
+// function test() {
+//     const msg = 'i am learning lexical scope and closure';
+
+//     return function() {
+//         console.log(msg);
+
+//     }
+
+// }
+
+// const sayMsg = test();
+// sayMsg();
