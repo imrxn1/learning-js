@@ -177,3 +177,80 @@
 //     y: 67,
 // }
 // console.log(rect4.position);
+
+// Inheritance
+
+//property descriptor
+// const person = {
+//     name: 'imran',
+// }
+
+// // const descriptor = Object.getOwnPropertyDescriptor(person, 'name');
+// // console.log(descriptor);
+
+// // let baseObj = Object.getPrototypeOf(person);
+// // let descriptor = Object.getOwnPropertyDescriptor(baseObj, 'toString');
+// // console.log(descriptor);
+
+// Object.defineProperty(person, 'name', {
+//     enumerable: false,
+//     configurable: false,
+//     writable: false,
+// })
+
+//  constructor prototype
+// function Square (width) {
+//     this.width = width;
+//     this.getWidth = function () {
+//         console.log(`width: ${this.width}`);
+//         // this.draw();
+//     }
+
+//     // this.draw = function () {
+//     //     console.log('draw');
+//     // }
+// }
+
+// Square.prototype = {
+//     draw: function () {
+//         this.getWidth();
+//         console.log('draw');
+//     },
+
+//     toString: function () {
+//         return  `my width: ${this.width}`;
+//     }
+// }
+
+// const sqr1 = new Square(10);
+// const Sqr2 = new Square(5);
+
+// //iterate object
+// // console.log(Object.keys(sqr1));
+// for(let i in sqr1)  {
+//     console.log(i);
+// }
+
+// custom inheritance
+
+// function Shape() {}
+
+// Shape.prototype.common = function () {
+//   console.log(" i am common method");
+// };
+
+// function Square(width) {
+//   this.width = width;
+// }
+
+// Square.prototype = Object.create(Shape.prototype);
+// Square.prototype.constructor = Square;
+
+// Square.prototype.draw = function () {
+//   console.log("drawing");
+// };
+
+// const square = new Square(45);
+// const shape = new Shape();
+
+
