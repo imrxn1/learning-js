@@ -233,24 +233,57 @@
 
 // custom inheritance
 
-// function Shape() {}
+// function extend(Parent, Child) {
+//   Child.prototype = Object.create(Parent.prototype);
+//   Child.prototype.constructor = Child;
+// }
+
+// parent
+// function Shape(color) {
+//   this.color = color;
+// }
 
 // Shape.prototype.common = function () {
 //   console.log(" i am common method");
 // };
 
-// function Square(width) {
+// // Square
+// function Square(width, color) {
+//   Shape.call(this, color);
 //   this.width = width;
 // }
 
-// Square.prototype = Object.create(Shape.prototype);
-// Square.prototype.constructor = Square;
+// extend(Shape, Square);
 
 // Square.prototype.draw = function () {
 //   console.log("drawing");
 // };
 
-// const square = new Square(45);
-// const shape = new Shape();
+// const square = new Square(45, "grren");
+
+
+// // Circle
+// function Circle(radius, color) {
+//   this.radius = radius;
+//   Shape.call(this, color);
+// }
+
+// extend(Shape, Circle);
+
+// Circle.prototype.draw = function () {
+//   console.log("drawing");
+// };
+
+// const circle = new Circle(45, "grren");
+
+// // method overrriding
+// Circle.prototype.common = function () {
+//     // Shape.prototype.common.call(this);
+//     console.log('i have over written');
+// }
+
+// const newCircle = new Circle(5, 'black');
+
+// const shape = new Shape ('blue');
 
 
